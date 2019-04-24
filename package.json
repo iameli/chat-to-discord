@@ -1,0 +1,54 @@
+{
+  "name": "chat-to-discord",
+  "version": "0.0.1",
+  "description": "Takes all my chats. Puts them in Discord.",
+  "main": "dist/chat-to-discord.js",
+  "scripts": {
+    "prepare": "babel --out-dir=dist --copy-files --source-maps=true src",
+    "start:electron": "cross-env DEBUG=\"chat:*\" electron -r esm src/chat-to-discord.js",
+    "start": "nodemon -w src -x npm run start:electron"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/iameli/chat-to-discord.git"
+  },
+  "author": "Eli Mallon",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/iameli/chat-to-discord/issues"
+  },
+  "homepage": "https://github.com/iameli/chat-to-discord#readme",
+  "dependencies": {
+    "@mixer/client-node": "^3.3.1",
+    "debug": "^4.1.1",
+    "dlive-javascript-sdk": "^2.1.13-test-000",
+    "dlivetv-unofficial-api": "^2.1.12",
+    "electron": "^5.0.0",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1",
+    "googleapis": "^39.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "ms": "^2.1.1",
+    "open": "^6.2.0",
+    "tmi.js": "^1.4.2",
+    "wolfy87-eventemitter": "^5.2.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "cross-env": "^5.2.0",
+    "esm": "^3.2.22",
+    "node-dev": "^4.0.0",
+    "nodemon": "^1.18.11",
+    "npm-run-all": "^4.1.5"
+  },
+  "browserslist": [
+    "node 10"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
