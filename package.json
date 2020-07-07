@@ -23,7 +23,7 @@
     "debug": "^4.1.1",
     "dlive-javascript-sdk": "^2.1.13-test-000",
     "dlivetv-unofficial-api": "^2.1.12",
-    "electron": "^5.0.0",
+    "electron": "^7.2.4",
     "express": "^4.16.4",
     "fs-extra": "^7.0.1",
     "googleapis": "^39.2.0",
